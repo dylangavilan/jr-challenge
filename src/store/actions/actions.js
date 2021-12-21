@@ -5,14 +5,15 @@ export function getClients() {
         const response = await axios.get(
             "https://private-bf0ebc-n5101.apiary-mock.com/api/ctas/top10"
         );
-        dispatch({ type: GET_TOP10, payload: response.data });
+        dispatch({ type: GET_TOP10, payload: response.data.data });
     };
 }
 export function getCategories() {
+    console.log("entre");
     return async function (dispatch) {
-        const brands = await axios.get(
+        const response = await axios.get(
             "https://private-bf0ebc-n5101.apiary-mock.com/api/spa/categories"
         );
-        dispatch({ type: GET_CATEGORIES, payload: brands.data });
+        dispatch({ type: GET_CATEGORIES, payload: response.data.data });
     };
 }

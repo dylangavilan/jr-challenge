@@ -1,4 +1,4 @@
 import { combineReducers } from "redux";
 import categoryReducer from "./category.reducer";
-
-export default combineReducers({ categoryReducer });
+import clientReducer from "./clients.reducer";
+export default combineReducers({ categoryReducer, clientReducer });
