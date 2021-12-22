@@ -7,7 +7,7 @@ const useStyle = makeStyles({
         margin: " 0.5rem",
         fontFamily: "bold",
         color: "#0e1111",
-        padding: "2px 15px ",
+        padding: "0.25rem 1rem",
         borderRadius: "0.4rem",
         fontSize: "1rem",
     },
@@ -22,7 +22,7 @@ export default function Categories() {
 
     return (
         <Container>
-            <Grid spacing={3} container direction="row" justifyContent="center">
+            <Grid spacing={2} container direction="row" justifyContent="center">
                 {categories?.map((e) => (
                     <Grid item xs={4}>
                         <Typography>
@@ -30,7 +30,7 @@ export default function Categories() {
                                 className={classes.count}
                                 style={{ backgroundColor: `${e.color}` }}
                             >
-                                {e.ctasCount}
+                                <b>{e.ctasCount}</b>
                             </span>
                             <span>{e.name}</span>
                         </Typography>
