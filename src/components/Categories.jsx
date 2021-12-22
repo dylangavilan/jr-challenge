@@ -21,7 +21,7 @@ export default function Categories() {
     }, [dispatch]);
 
     return (
-        <Container>
+        <div style={{ paddingLeft: "0.6rem" }}>
             <Grid spacing={2} container direction="row" justifyContent="center">
                 {categories?.map((e) => (
                     <Grid item xs={4}>
@@ -37,6 +37,6 @@ export default function Categories() {
                     </Grid>
                 ))}
             </Grid>
-        </Container>
+        </div>
     );
 }

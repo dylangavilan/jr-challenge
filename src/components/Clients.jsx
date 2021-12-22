@@ -19,36 +19,39 @@ export default function Clients() {
     }, [dispatch]);
 
     return (
-        <List>
-            {clients?.map((el) => {
-                return (
-                    <ListItem button>
-                        <ListItemAvatar>
-                            <Avatar
-                                style={{
-                                    backgroundColor:
-                                        categories[el.categoryId].color,
-                                }}
-                            >
-                                {el.customerName[0]}
-                            </Avatar>
-                        </ListItemAvatar>
-
-                        <ListItemText
-                            primary={`${el.customerName}  ${el.customerLastName}`}
-                            secondary={
-                                <span
+        <div>
+            <List>
+                {clients?.map((el) => {
+                    return (
+                        <ListItem button>
+                            <ListItemAvatar>
+                                <Avatar
                                     style={{
-                                        color: categories[el.categoryId].color,
+                                        backgroundColor:
+                                            categories[el.categoryId].color,
                                     }}
                                 >
-                                    {el.title}: {el.groupDescription}
-                                </span>
-                            }
-                        />
-                    </ListItem>
-                );
-            })}
-        </List>
+                                    {el.customerName[0]}
+                                </Avatar>
+                            </ListItemAvatar>
+
+                            <ListItemText
+                                primary={`${el.customerName}  ${el.customerLastName}`}
+                                secondary={
+                                    <span
+                                        style={{
+                                            color: categories[el.categoryId]
+                                                .color,
+                                        }}
+                                    >
+                                        {el.title}: {el.groupDescription}
+                                    </span>
+                                }
+                            />
+                        </ListItem>
+                    );
+                })}
+            </List>
+        </div>
     );
 }
