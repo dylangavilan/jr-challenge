@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getCategories } from "../store/actions/actions";
-import { Grid, makeStyles, Typography, Container } from "@material-ui/core";
+import { Grid, makeStyles, Typography } from "@material-ui/core";
 const useStyle = makeStyles({
     count: {
         margin: " 0.5rem",
