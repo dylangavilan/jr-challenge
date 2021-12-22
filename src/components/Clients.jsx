@@ -22,7 +22,7 @@ export default function Clients() {
         <List>
             {clients?.map((el) => {
                 return (
-                    <ListItem>
+                    <ListItem button>
                         <ListItemAvatar>
                             <Avatar
                                 style={{
